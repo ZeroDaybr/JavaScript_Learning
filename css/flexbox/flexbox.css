@@ -1,0 +1,64 @@
+:root{
+    --clr-dark: #0f172a;
+    --clr-light: #f1f5f9;
+    --clr-accent: #e11d48;
+}
+*, *::before, *::after{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    padding: 0;
+    line-height: 1.5;
+    word-spacing: 1.4px;
+    font-family: 'Times New Roman', Times, serif;
+    color: var(--clr-dark);
+    background-color: var(--clr-light);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+
+}
+.container{
+    width: 80%;
+    height: 80%;
+    margin: 0 auto;
+    border: 10px solid var(--clr-dark);
+}
+
+.item{
+    width: 100px;
+    height: 100px;
+    background-color: #fb7185;
+    padding: 1em;
+    font-weight: 700;
+    color: var(--clr-light);
+    text-align: center;
+    border: 10px solid var(--clr-accent);
+    border-radius: 10px;
+}
+/* End of Base Style */
+
+.container{
+    display:  flex; /* If not mentioned Horizontal type*/
+    /* flex-direction: column; Vertical type */
+    /* flex-direction: row;  Horizontal type */
+    justify-content: center; /* It works in parent not in children class. It also align item in X axis or horizontal*/
+    align-items: center; /* It works also for parent class and Y-axis or vertical. */
+    gap: 1rem;
+    flex-wrap:  wrap;   /* This will make the items to go down one by one if there is no space left in that direction. overflow will not happen here */
+    /* align-content: center; this property works when flexwrap was called */
+}
+
+.item-3{
+    /* flex-grow: 1; This will make the item go to last position in horizontal direction but it doesn't work on Safari browser. This will make the item to grow according to its content size It will take the remaining space in the container */
+    /* order: -1; */
+}
+
+.item-3{
+    /* flex-shrink: 0; */
+    /* flex: grow shrink basis; */
+    /* flex: 0.1; */
+    align-self: center;
+}
