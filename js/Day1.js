@@ -1,3 +1,6 @@
+// vaariables and datatypes
+
+
 // Printing type
 console.log("Printing Name = Ajmain");
 
